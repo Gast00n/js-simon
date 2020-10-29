@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #001533;
+}
+
+.main {
+    width: 40%;
+    margin: 200px auto;
+}
+
+.title {
+    text-align: center;
+}
+
+h1 {
+    color: #001533;
+    text-transform: lowercase;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #0cd977;
+}
+
+.number-box {
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    margin-bottom: 20px;
+    width: 300px;
+    height: 300px;
+    background: #f1f1f1;
+    border: 1px #bbb solid;
+    border-radius: 20px;
+    color: #001533;
+}
+
+.progress {
+    width:500px;
+    max-width: 100%;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.bar {
+    width: 0;
+    height: 100%;
+    background: #0cd977;
+    transition: width .1s linear;
+}
+
+.result {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    border: 1px #bbb solid;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.result .btn {
+    display: block;
+    background: #001533;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
