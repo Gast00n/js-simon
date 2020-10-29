@@ -35,13 +35,14 @@
 
     //  2. Gestione del counter di 30 Secondi
     var width = 100;
-    var secs = 30;
+    var secs = 10;
     var timeUp = setInterval(function() {
         if(secs == 0) {
+            var finalBoxes = boxes.html();
             bar.css('width', width + '%');
             timer.text(secs);
             var numBox = $('.boxes > li.box');
-            numBox.html('<span class="number"><i class="fas fa-question"></i></span>');
+            numBox.html('<span class="number"><i class="fas fa-question"></i></span>'); //Nascondo i numeri da ricordare
             numBox.css('color', 'tomato');
 
             //  3. Prompt Inserimento Numeri
@@ -63,10 +64,9 @@
                     output += '<span class="green">' + userNum + '</span>, '
                     corretti++;
                 }
-            }
-
-            console.log(output + corretti + ' ' + sbagliati);
-
+            }                
+            
+            
             if (corretti == 5) {
                 results.html('COMPLIMENTI! Hai vinto! Hai ricordato tutti e 5 i numeri!<br>La sequenza originale è: <strong>' + numbers + '</strong><br>I numeri inseriti sono:' + output);
             } else if  (sbagliati == 5)  {
@@ -74,10 +74,12 @@
             } else {
                 results.html('Hai indovinato ' + corretti + ' numeri. Ne hai però sbagliati: ' + sbagliati + '<br>La sequenza originale è: <strong>' + numbers + '</strong><br>I numeri inseriti sono:' + output);
             }
-
+            
+            numBox.css('color', '#001533');
+            boxes.html(finalBoxes); //Ripristino i Box Iniziali
             clearInterval(timeUp);
         } else {
-            width = width - (100/30);
+            width = width - (100/10);
             bar.css('width', width + '%');
             timer.text(secs);
             secs--;
