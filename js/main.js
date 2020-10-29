@@ -18,7 +18,6 @@
      var bar = $('.bar');
      var timer = $('.timer');
      var boxes = $('.boxes');
-     var numBox = $('.boxes li.box > span.number');
     
 
     //setup 
@@ -41,8 +40,9 @@
         if(secs == 0) {
             bar.css('width', width + '%');
             timer.text(secs);
-            numBox.html('<i class="fas fa-question"></i>');
-            numBox.css('color',)
+            var numBox = $('.boxes > li.box');
+            numBox.html('<span class="number"><i class="fas fa-question"></i></span>');
+            numBox.css('color', 'tomato');
             clearInterval(timeUp);
         } else {
             width = width - (100/30);
