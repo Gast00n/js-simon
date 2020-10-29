@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -13,10 +14,13 @@
             <h1>Boolean<span>Memory</span></h1>
         </div>
         <div class="number-box">
-            <div class="box">
-                <span id="number"></span>
+            <ul class="boxes">
+            </ul>
+            <div class="info">
+                <p>Hai 30 secondi per memorizzare i 5 numeri casuali che vedi qui sopra. Riuscirai a vincere?</p>
             </div>
             <div class="progress">
+                <div class="timer"></div>
                 <div class="bar"></div>
             </div>
         </div>

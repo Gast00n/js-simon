@@ -8,6 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #001533;
+    background: #fff;
 }
 
 .main {
@@ -38,14 +39,44 @@ h1 span {
     align-items: center;
 }
 
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+}
+
+.boxes li {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 900;   
+}
+
 .box {
     margin-bottom: 20px;
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     background: #f1f1f1;
     border: 1px #bbb solid;
     border-radius: 20px;
     color: #001533;
+}
+
+.info {
+    width: 250px;
+    background: #f1f1f1;
+    border: 1px #bbb solid;
+    border-radius: 20px;
+    color: #001533;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 10px;
+    margin-bottom: 10px;
+
 }
 
 .progress {
@@ -55,13 +86,27 @@ h1 span {
     background-color: #ddd;
     border-radius: 10px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.timer {
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d90c32;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+
 }
 
 .bar {
-    width: 0;
+    width: 100%;
     height: 100%;
-    background: #0cd977;
+    background: #d90c32;
     transition: width .1s linear;
+    border-radius: 10px;
 }
 
 .result {
