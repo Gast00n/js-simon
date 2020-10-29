@@ -120,13 +120,10 @@ h1 span {
     padding: 50px;
 }
 
-.result .btn {
-    display: block;
-    background: #001533;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
-    padding: 5px 20px;
-    border-radius: 10px;
+.green {
+    color: #0cd977;
+}
+
+.red {
+    color: tomato;
 }
