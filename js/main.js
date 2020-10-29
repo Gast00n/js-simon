@@ -35,7 +35,7 @@
 
     //  2. Gestione del counter di 30 Secondi
     var width = 100;
-    var secs = 10;
+    var secs = 30;
     var timeUp = setInterval(function() {
         if(secs == 0) {
             bar.css('width', width + '%');
@@ -77,7 +77,7 @@
 
             clearInterval(timeUp);
         } else {
-            width = width - (100/10);
+            width = width - (100/30);
             bar.css('width', width + '%');
             timer.text(secs);
             secs--;
